@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotous99 | Сервер Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Подключение иконок для соцсетей -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo">lotous99</div>
+            <nav class="nav">
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#features" class="nav-link">Особенности</a>
+                <a href="#how-to-start" class="nav-link">Как начать</a>
+            </nav>
+            <!-- Соцсети в шапке -->
+            <div class="header-socials">
+                <a href="https://t.me" target="_blank" class="social-icon tg" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="ССЫЛКА_СЮДА" target="_blank" class="social-icon custom" title="Дополнительная соцсеть"><i class="fas fa-link"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран с заблюренным лотосом -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Добро пожаловать на <span class="highlight">lotous99</span></h1>
+            <p class="hero-subtitle">Уютное выживание, верные друзья и бесконечные приключения ждут тебя!</p>
+            
+            <!-- Интерактивная плашка с IP -->
+            <div class="ip-container" onclick="copyIP()">
+                <span class="ip-text" id="server-ip">lotous99.millida.host</span>
+                <span class="ip-btn">Копировать IP</span>
+            </div>
+            <p class="copy-alert" id="copy-alert">IP-адрес скопирован в буфер обмена!</p>
+
+            <!-- Блок соцсетей под IP -->
+            <div class="hero-socials-block">
+                <p class="socials-title">Присоединяйся к сообществу:</p>
+                <div class="socials-buttons">
+                    <a href="https://t.me/Lotousmain" target="_blank" class="btn-social btn-tg">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                    <a href="https://max.ru/join/Pu75-8zLm8J-lt2M6h5glo4cqZr75ANqGZKwBecCx0s" target="_blank" class="btn-social btn-custom">
+                        <i class="fas fa-link"></i> Вторая ссылка
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "О нас" -->
+    <section id="about" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">О нашем проекте</h2>
+            <p class="section-text">
+                Мы создали идеальное место для тех, кто ценит классический дух Minecraft, но хочет чего-то большего. 
+                Наш сервер работает на мощном хостинге, обеспечивая стабильный TPS без лагов и задержек круглые сутки.
+            </p>
+        </div>
+    </section>
+
+    <!-- Секция "Особенности" -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас?</h2>
+            <div class="features-grid">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">Высокий TPS</h3>
+                    <p class="card-desc">Никаких лагов! Мощный процессор справляется с любыми фермами и механизмами.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3 class="card-title">Честная игра</h3>
+                    <p class="card-desc">Надёжная защита от читеров и отзывчивая администрация, готовая помочь 24/7.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3 class="card-title">Живая экономика</h3>
+                    <p class="card-desc">Торгуй с игроками, создавай свои магазины и становись самым богатым на сервере.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Как начать играть" -->
+    <section id="how-to-start" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Как начать играть?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <p class="step-text">Запусти лицензионный или пиратский TLauncher (версия 1.20+).</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <p class="step-text">Выбери сетевую игру и нажми кнопку "Добавить".</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <p class="step-text">Введи адрес <strong>lotous99.millida.host</strong> и заходи к нам!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 lotous99. Все права защищены. Сервер создан на платформе <a href="https://millida.net" target="_blank" style="color: #a370f7; text-decoration: none;">Millida</a>.</p>
+            <!-- Соцсети в подвале -->
+            <div class="footer-socials">
+                <a href="https://t.me" target="_blank" class="footer-social-link"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="ССЫЛКА_СЮДА" target="_blank" class="footer-social-link"><i class="fas fa-link"></i> Вторая ссылка</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт копирования IP -->
+    <script>
+        function copyIP() {
+            const ipText = document.getElementById('server-ip').innerText;
+            navigator.clipboard.writeText(ipText).then(() => {
+                const alertText = document.getElementById('copy-alert');
+                alertText.classList.add('show');
+                setTimeout(() => {
+                    alertText.classList.remove('show');
+                }, 2500);
+            });
+        }
+    </script>
+</body>
+</html>

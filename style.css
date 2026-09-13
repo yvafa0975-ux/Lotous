@@ -1,0 +1,368 @@
+/* Обнуление базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121214;
+    color: #e1e1e6;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка сайта */
+.header {
+    background-color: rgba(18, 18, 20, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #29292e;
+    padding: 20px 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #00ff87;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #c4c4cc;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #a370f7;
+}
+
+/* Соцсети в шапке */
+.header-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #e1e1e6;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon.tg:hover { color: #0088cc; }
+.social-icon.custom:hover { color: #ff0055; }
+
+/* Главный экран */
+.hero {
+    min-height: 100vh;
+    /* Устанавливаем изображение лотоса из Википедии фоном */
+    background: url('https://wikimedia.org') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 0 60px 0;
+}
+
+/* Эффект размытия поверх картинки лотоса */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(18, 18, 20, 0.7); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: #a370f7;
+    text-shadow: 0 0 20px rgba(163, 112, 247, 0.4);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #c4c4cc;
+    margin-bottom: 40px;
+}
+
+/* Кнопка IP */
+.ip-container {
+    background-color: #202024;
+    border: 2px dashed #00ff87;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 6px 6px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 15px rgba(0, 255, 135, 0.1);
+}
+
+.ip-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 255, 135, 0.25);
+}
+
+.ip-text {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+    letter-spacing: 0.5px;
+}
+
+.ip-btn {
+    background-color: #00ff87;
+    color: #121214;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.copy-alert {
+    margin-top: 15px;
+    color: #00ff87;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    height: 20px;
+}
+
+.copy-alert.show {
+    opacity: 1;
+}
+
+/* Кнопки соцсетей в Hero */
+.hero-socials-block {
+    margin-top: 40px;
+}
+
+.socials-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #7c7c8a;
+    margin-bottom: 15px;
+}
+
+.socials-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-social:hover {
+    transform: translateY(-3px);
+}
+
+.btn-tg { background-color: #229ED9; }
+.btn-tg:hover { background-color: #1e8ec3; }
+
+.btn-custom { background-color: #ff0055; }
+.btn-custom:hover { background-color: #e6004c; }
+
+/* Секции */
+.section {
+    padding: 100px 0;
+}
+
+.section-dark {
+    background-color: #1a1a1e;
+}
+
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 800;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #a370f7;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.section-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    color: #c4c4cc;
+}
+
+/* Сетка особенностей */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #1a1a1e;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid #29292e;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #a370f7;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card-desc {
+    color: #94949e;
+    font-size: 15px;
+}
+
+/* Инструкция */
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    background-color: #121214;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #a370f7;
+}
+
+.step-num {
+    font-size: 24px;
+    font-weight: 800;
+    color: #a370f7;
+    margin-right: 20px;
+    min-width: 30px;
+}
+
+.step-text {
+    font-size: 16px;
+    color: #e1e1e6;
+}
+
+/* Подвал */
+.footer {
+    background-color: #0c0c0e;
+    padding: 40px 0;
+    border-top: 1px solid #1c1c1f;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+    color: #7c7c8a;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social-link {
+    color: #7c7c8a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social-link:hover {
+    color: #fff;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    .hero-title { font-size: 32px; }
+    .hero-subtitle { font-size: 16px; }
+    .header-flex { flex-direction: column; gap: 15px; text-align: center; }
+    .nav-link { margin: 0 10px; }
+    .header-socials { margin-top: 5px; }
+    .ip-container { flex-direction: column; border-radius: 20px; padding: 15px; }
+    .ip-text { margin-right: 0; margin-bottom: 15px; }
+    .socials-buttons { flex-direction: column; gap: 10px; width: 100%; max-width: 250px; margin: 0 auto; }
+    .footer-content { flex-direction: column; text-align: center; }
+}
